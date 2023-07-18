@@ -1,7 +1,8 @@
 import tensorflow
-from tensorflow.keras.preprocessing import image
-from tensorflow.keras.layers import GlobalMaxPooling2D
-from tensorflow.keras.applications.resnet50 import ResNet50,preprocess_input
+from tensorflow import keras
+from keras.preprocessing import image
+from keras.layers import GlobalMaxPooling2D
+from keras.applications.resnet import ResNet50,preprocess_input
 import numpy as np
 from numpy.linalg import norm
 import os
