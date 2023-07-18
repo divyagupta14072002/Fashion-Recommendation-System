@@ -4,9 +4,10 @@ from PIL import Image
 import numpy as np
 import pickle
 import tensorflow
-from tensorflow.keras.preprocessing import image
-from tensorflow.keras.layers import GlobalMaxPooling2D
-from tensorflow.keras.applications.resnet50 import ResNet50,preprocess_input
+from tensorflow import keras
+from keras.preprocessing import image
+from keras.layers import GlobalMaxPooling2D
+from keras.applications.resnet import ResNet50,preprocess_input
 from sklearn.neighbors import NearestNeighbors
 from numpy.linalg import norm
 
@@ -63,7 +64,7 @@ if uploaded_file is not None:
         # recommendention
         indices = recommend(features,feature_list)
         # show
-        col1,col2,col3,col4,col5 = st.beta_columns(5)
+        col1,col2,col3,col4,col5 = st.columns(5)
 
         with col1:
             st.image(filenames[indices[0][0]])
